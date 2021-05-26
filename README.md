@@ -20,7 +20,7 @@
 
 ## Integrating ✨
 
-If you would like to integrating `animals` into your project, you have to import it.
+If you would like to integrate `animals` into your project, you have to import it.
 ```ts
 import Animals from "https://deno.land/x/animals/mod.ts";
 ```
