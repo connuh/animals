@@ -13,7 +13,7 @@
 	<a href="https://deno.land" target="_blank">
     	<img src="https://img.shields.io/badge/Deno-1.10.0+-7DCDE3?style=for-the-badge" alt="Node">
      </a>
-     <a href="https://github.com/connuh/dank/blob/master/LICENSE" target="_blank">
+     <a href="https://github.com/connuh/animals/blob/master/LICENSE" target="_blank">
     	<img src="https://img.shields.io/badge/License-WTFPL-7DCDE3?style=for-the-badge" alt="License">
      </a>
 </p>
