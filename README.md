@@ -1,37 +1,84 @@
+<h1 align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg" width="150px"><br>
+    Animals - a fully modular API wrapper. 🐢
+</h1>
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=connuh&repo=animals&cache_seconds=86400&theme=default">
+	Animals is an API wrapper that can make customizable HTTP requests to the URL specified making it fully modular!
 </p>
 
-# Animals - a fully modular API wrapper. 🐢
-### Animals is an API wrapper that can make customizable HTTP requests to the URL specified making it fully modular!
----
-### Usage
+<p align="center">
+	<a href="https://deno.land" target="_blank">
+    	<img src="https://img.shields.io/badge/Version-1.1.0-7DCDE3?style=for-the-badge" alt="Version">
+     </a>
+	<a href="https://deno.land" target="_blank">
+    	<img src="https://img.shields.io/badge/Deno-1.10.0+-7DCDE3?style=for-the-badge" alt="Node">
+     </a>
+     <a href="https://github.com/connuh/dank/blob/master/LICENSE" target="_blank">
+    	<img src="https://img.shields.io/badge/License-WTFPL-7DCDE3?style=for-the-badge" alt="License">
+     </a>
+</p>
 
+## Integrating ✨
+
+If you would like to integrating `animals` into your project, you have to import it.
 ```ts
-// Imports
-import Animals from "./mod.ts";
-
-// Fetch the list of currently available animals!
-console.log(Animals.getAnimals()); //> [ "cat", "dog", "duck" ]
-
-// Fetch a random animal from `Animal.getAnimals()`!
-console.log(await Animals.get()) //> https://<url>
-
-// Fetch a random image of a duck!
-console.log(await Animals.get("duck")); //> https://random-d.uk/api/<file>
-
-// Register a new animal that has already been registered (returns false)
-console.log(Animals.registerAnimal("duck", "GET", "https://random-d.uk/api/v2/random", "url")); //> false
-
-// Register an animal that hasn't been registered (for our sake, this wont be an animal)
-console.log(Animals.registerAnimal("platypus", "GET", "https://example.com", "invalid")); //> true
-
-// Re-fetech the list of currently available animals!
-console.log(Animals.getAnimals()); //> [ "cat", "dog", "duck", "platypus" ]
-
-// Fetch a random image of a platypus!
-console.log(await Animals.get("platypus")); // Throws an due to it not being able to parse response
+import Animals from "https://deno.land/x/animals/mod.ts";
 ```
 
-### Contributions
+After you import the file, you can call functions like this:
+```ts
+Animals.getAnimals(); // [ ]
+Animals.get(); // <string>
+```
+
+## Documentation 📖
+
+Functions:
+```ts
+getAnimals();
+registerAnimal();
+get();
+request();
+```
+
+Usage:
+```ts
+/**
+ * Animals.getAnimals() returns an Array containing every `name` of the animals
+ * available for you to call `get()` on.
+ */
+Animals.getAnimals();
+```
+```ts
+/**
+ * Animal.registerAnimal() returns a Boolean if the animal was succesfully registered.
+ *
+ * Takes in 4 parameters `name, method, url, key` (all 4 must be set)
+ * This registers an animal for you to call `get()` on later
+ */
+Animals.registerAnimal(name, method, url, key);
+```
+```ts
+/**
+ * Animal.get(); returns a String if the animal was succesfully requsted.
+ *
+ * Takes in a singular `name` parameter, if not set, it will be randomised
+ * for a list of valid options for `name`, call `getAnimals();`
+ *
+ * Throws an error if you provide an invalid name
+ */
+Animals.get();
+```
+```ts
+/**
+ * Don't use this.
+ */
+Animal.request();
+```
+
+If you would like more use case, please see `example.ts`
+
+---
+
+### Contributions 🎉
 ###### All contributions are accepted, simply open an Issue / Pull request.
