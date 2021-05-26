@@ -60,10 +60,10 @@ Animals.registerAnimal(name, method, url, key);
 ```
 ```ts
 /**
- * Animal.get(); returns a String if the animal was succesfully requsted.
+ * Animal.get() returns a String if the animal was succesfully requsted.
  *
  * Takes in a singular `name` parameter, if not set, it will be randomised
- * for a list of valid options for `name`, call `getAnimals();`
+ * for a list of valid options for `name`, call `getAnimals()`
  *
  * Throws an error if you provide an invalid name
  */
