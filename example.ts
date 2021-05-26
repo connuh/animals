@@ -26,4 +26,4 @@ console.log(Animals.registerAnimal("platypus", "GET", "https://example.com", "in
 console.log(Animals.getAnimals()); //> [ "cat", "dog", "duck", "platypus" ]
 
 // Fetch a random image of a platypus!
-console.log(await Animals.get("platypus")); // Throws an due to it not being able to parse response
+console.log(await Animals.get("platypus")); // Throws an Error due to it not being able to parse response
